@@ -1,0 +1,385 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>GIT para no desarrolladores | by Federico Degiovanni @fdegivanni</title>
+
+    <meta name="description" content="GIT para no desarrolladores" />
+    <meta name="author" content="Federico Degiovanni" />
+
+    <link rel="stylesheet" href="extras/highlight/styles/github.css">
+    <link rel="stylesheet" href="extras/mermaid/mermaid.forest.css">
+    <link href="css/classic-slides.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body class="impress-not-supported">
+  <div class="fallback-message">
+      <p>Tu navegador <b>no soporta las caracteristicas requeridas</b> por impress.js, por lo que estas viendo una versión simplificada de esta presentación.</p>
+      <p>Para una mejor experiencia usa la ultima versión estable de <b>Chrome</b>, <b>Safari</b> o <b>Firefox</b>.</p>
+  </div>
+
+<div id="impress" data-transition-duration="1000">
+
+    <div class="step slide title" data-x="-1000" data-y="-1500">
+        <h1>GIT: <br />
+            para no programadores
+        </h1>
+        <h2>FLISoL San Francisco</h2>
+        <h3>27.04.2019 | Degiovanni Federico</h3>
+    </div>
+
+    <div id="toc" class="step slide" data-rel-x="1000" data-rel-y="0">
+        <h1>Tabla de contenidos</h1>
+        <ul style='overflow:auto;height:400px;border:solid 1px green;'>
+            <li><a href="#step-1">Portada</a></li>
+            <li><a href="#step-2">Tabla de contenidos</a></li>
+            <li><a href="#step-3">Información</a></li>
+            <li><a href="#step-4">Aclaraciones</a></li>
+            <li><a href="#step-5">Ejemplo: Hola Mundo</a></li>
+            <li><a href="#step-6">Ejemplo: Personajes</a></li>
+            <li><a href="#step-7">Ejemplo: Historia</a></li>
+            <li><a href="#step-8">Ejemplo: Desenlace</a></li>
+            <li><a href="#step-9">¿Problemas?</a></li>
+            <li><a href="#step-10">Solución</a></li>
+            <li><a href="#step-11">¿Qué es GIT? | ¿Control de qué?</a></li>
+            <li><a href="#step-12">Productos</a></li>
+            <li><a href="#step-13">Repositorios</a></li>
+            <li><a href="#step-14">Info</a></li>
+            <li><a href="#step-15">Órdenes básicas</a></li>
+            <li><a href="#step-16">Nucleo de Linux</a></li>
+            <li><a href="#step-17">Veamos cómo funciona...</a></li>
+            <li><a href="#step-18">Muchas gracias</a></li>
+            <li><a href="#moreinfo">Referencias</a></li>
+        </ul>
+    </div>
+
+    <div class="step slide row vertical-bdarkb">
+        <div class="col-6">
+          <h1>Información</h1>
+        </div>
+        <div class="col-6">
+          <p> <b>Yo: </b> Degiovanni Federico</p>
+          <p> <b>¿Que hago?: </b> Desarrollador en Nexo Soluciones SA, estudiante de la UTN</p>
+          <p> <b>¿Qué tecnologías uso a diario?: </b> PHP, JS, CSS, HTML, Unity3D, C#</p>
+          <h3 class="subline"> </h3>
+        </div>
+    </div>
+
+    <div class="step slide row">
+      <div class="col-12">
+        <h1>Aclaraciones</h1>
+      </div>
+      <div class="col-12">
+        <ul class="list-unstyled">
+           <li>No soy un experto</li>
+           <li>Esto no es una conferencia</li>
+           <li>Simplemente quiero compartir lo poco que sé</li>
+           <li>Todas las preguntas son bienvenidas!</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+        This element introduces rotation.
+
+        Notation shouldn't be a surprise. We use `data-rotate="30"` attribute, meaning that this
+        element should be rotated by 30 degrees clockwise.
+    -->
+    <div class="step slide row vertical-bdarkb" data-rel-x="1100" data-rel-y="300" data-rotate="30">
+      <div class="col-6">
+        <h1>Ejemplo: Hola Mundo</h1>
+      </div>
+
+      <div class="col-6">
+        <img src="images/acompaname-a-ver-esta-triste-historia.jpg"
+             alt="Virginia Lago: acompaname a ver esta triste historia"/>
+        <blockquote>
+        <p class="left bottom"><small>Image credit: <a href="https://memegenerator.net/instance/82320053/virginia-lago-acompaname-a-ver-esta-triste-historia">memegenerator.net</small></p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="step slide horizontal-wb row" data-rel-x="800" data-rel-y="800" data-rotate="60">
+      <div class="col-12">
+        <h1>Personajes</h1>
+      </div>
+      <div class="col-12">
+        <div class="row">
+      <div class="col-3 text-center">
+        <img class="sq180" src="images/characters/margareth.png" alt="">
+        <h2>Margareth</h2>
+      </div>
+      <div class="col-3 text-center">
+        <img class="sq180" src="images/characters/hodor.png" alt="">
+        <h2>Hodor</h2>
+      </div>
+      <div class="col-3 text-center">
+        <img class="sq180" src="images/characters/danearys.png" alt="">
+        <h2>Daenerys</h2>
+      </div>
+      <div class="col-3 text-center">
+        <img class="sq180" src="images/characters/oberyn.png" alt="">
+        <h2>Oberyn</h2>
+      </div>
+    </div>
+           <blockquote>
+           <p class="left bottom"><small>Image credit: <a href="https://www.behance.net/mariapicasso">Maria Picassó i Piquer</a></small></p>
+           </blockquote>
+      </div>
+    </div>
+
+    <div class="step slide horizontal-wb row" data-rel-x="300" data-rel-y="1100" data-rotate="90">
+      <div class="col-12 h50">
+        <h1>Historia</h1>
+      </div>
+      <div class="col-12">
+        <div class="row text-center">
+          <p>Estos changos deben realizar un Trabajo Práctico para la facultad </p>
+          <p>Incluye un Paper, un Póster y una Presentación</p>
+        </div>
+    </div>
+  </div>
+
+    <div  class="step slide horizontal-wb row" data-rel-x="-300" data-rel-y="1100" data-rotate="120">
+      <div class="col-12 h50">
+        <h1>Desenlace</h1>
+      </div>
+      <div class="col-12">
+        <div class="row text-center" >
+          <div class="col-6">
+            <h4>Opción A</h4>
+            <p>Archivos locales que viajan en una memoria flash</p>
+          </div>
+          <div class="col-6">
+            <h4>Opción B</h4>
+            <p>Archivos en un disco remoto tal como: Drive, Dropbox, etc</p>
+          </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="step slide" data-rel-x="-800" data-rel-y="800" data-rotate="150" data-autoplay="3">
+        <h3>¿Te suena?</h3>
+        <img class="w80" src="images/proceso-tesis.png" alt="">
+    </div>
+
+    <div class="step slide row vertical-bdarkb" data-rel-x="-1100" data-rel-y="300" data-rotate="180">
+      <div class="col-6">
+        <h1 class="child-centered-v">¿Problemas?</h1>
+      </div>
+
+      <div class="col-6">
+        <ul>
+          <li>Pérdida de un componente</li>
+          <li>Pérdida de cambios (el componente que tengo no es el último)</li>
+          <li>Doble mantenimiento</li>
+          <li>Superposición de cambios</li>
+          <li>Cambios no validados</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="step slide row vertical-bdarkb" data-rel-x="-1100" data-rel-y="-300" data-rotate="210">
+      <div class="col-6 ">
+        <h1 class="child-centered-v">Solución</h1>
+      </div>
+
+      <div class="col-6">
+        <div id="joseph" class="substep">
+          <img src="images/hagamos-asado.jpg"
+               alt="Joseph Ducreux: hagamos asado ... tomemo fernet"/>
+          <blockquote>
+          <p class="left bottom"><small>Image credit: <a href="https://www.memegenerator.es/meme/24425647">memegenerator.es</a></small></p>
+          </blockquote>
+        </div>
+        <div class="substep fade-in fade-out" style="transition-delay: 2s">
+          <p>Naaa...</p>
+          <br>
+          <h1>Usemos GIT</h1>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="step slide row all-b" data-rel-x="-800" data-rel-y="-800" data-rotate="240">
+      <div class="col-6">
+        <h3>¿Qué es GIT?</h3>
+        <div class="row">
+          <p>Es un software de control de versiones</p>
+          <img class="w70" src="images/LinusTorvalds.jpg" alt="Linus Torvalds">
+          <br><br>
+        </div>
+          <div class="row">
+            <blockquote>
+              <p class="left bottom"><small>Image credit: <a href="https://commons.wikimedia.org/w/index.php?curid=54706023">Von Sprat - wikimedia</a></small></p>
+            </blockquote>
+          </div>
+      </div>
+      <div class="col-6">
+        <h3>¿Control de qué?</h3>
+        <div class="row">
+          <p>Control de versiones es la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración del mismo. Una versión, revisión o edición de un producto, es el estado en el que se encuentra el mismo en un momento dado de su desarrollo o modificación.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="step slide row parent-centered" data-rel-x="-300" data-rel-y="-1100" data-rotate="270">
+      <div class="col-1 vertical-text">
+        <h3>Productos</h3>
+      </div>
+      <div class="col-11 child-centered-v">
+        <h4>Privativos</h4>
+        <div class="row ">
+          <img class="w100" src="images/products/privativos.png" alt="">
+        </div>
+        <h4>Libres</h4>
+        <div class="row">
+          <img class="w100" src="images/products/libres.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="step slide row" data-rel-x="-2000" data-rel-y="-1100" data-rotate="300">
+        <h3>Repositorios</h3>
+        <p>es un espacio donde se almacena, organiza, mantiene y difunde información digital, habitualmente archivos informáticos</p>
+        <div class="row">
+          <div class="col-6 ">
+
+          </div>
+          <div class="col-6">
+
+          </div>
+        </div>
+        <img class="w80" src="images/proceso-tesis.png" alt="">
+    </div>
+
+    <div class="step slide row all-b" >
+      <div class="col-6">
+        <h3>GIT</h3>
+        <div class="row">
+          <ul class="list-unstyled">
+            <li>Licencia Pública General de GNU versión 2</li>
+            <li>Lo mantienen unos 280 programadores</li>
+            <li>Distribuido</li>
+            <li>Lanzamiento inicial:   7 de abril de 2005</li>
+            <li>Última versión: 2.21.0 24 de febrero de 2019</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-6">
+        <h3>Repositorios remotos</h3>
+        <div class="row">
+          <div class="col-4">
+            <img class="w70px" src="images/repos/GitHub-Mark.png" alt="">
+          </div>
+          <div class="col-4">
+            <img class="w70px" src="images/repos/gitlab.png" alt="">
+          </div>
+          <div class="col-4">
+            <img class="w70px" src="images/repos/bitbucket.png" alt="">
+          </div>
+
+        </div>
+        <div class="row">
+          <ul>
+            <li>Phabricator</li>
+            <li>Gitea</li>
+            <li>GitBucket</li>
+            <li>Kallithea</li>
+            <li>GitKraken</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--
+        This step also sets a custom data-transition-duration. All of the above steps used the value set
+        in the root div#impress element, but it is also allowed to set it for each step. Since transitioning
+        to this step will rotate twice around it's axis, we give the transition a bit more time here.
+    -->
+    <div id="moreinfo" class="step slide" data-x="2020" data-y="700" data-rotate="720" data-transition-duration="2000">
+        <h1>Referencias</h1>
+        <ul>
+        <li>
+          <a href="https://rogerdudler.github.io/git-guide/">Guia Git</a>
+        </li>
+        <li>
+          <a href="https://es.wikipedia.org/wiki/Git">Wikipedia: git</a>
+        </li>
+        <li>
+          <a href="https://git-scm.com/">Git --fast-version-control</a>
+        </li>
+        <li>
+          <a href="https://es.wikipedia.org/wiki/Control_de_versiones">Wikipedia: control de versiones</a>
+        </li>
+        <li>
+          <a href="https://medium.com/@jointdeveloper/sistemas-de-control-de-versiones-qu%C3%A9-son-y-por-qu%C3%A9-amarlos-24b6957e716e">Sistemas de Control de Versiones, qué son y por qué amarlos</a>
+        </li>
+        </ul>
+    </div>
+
+    <!-- This last, empty "slide" is set to be very large using the data-scale attribute,
+         so that it covers all the other slides you just saw.
+         It's a common way of zooming out at the end, to show the whole presentation.
+         In CSS, we set pointer-events:none to make this slide non-clickable.
+         It makes a difference at least for SVG content, such as the mermaid diagram. -->
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10" style="pointer-events: none;">
+    </div>
+</div>
+
+<!--
+    Add navigation-ui controls: back, forward and a select list.
+    Add a progress indicator bar (current step / all steps)
+    Add the help popup plugin
+-->
+<div id="impress-toolbar"></div>
+
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
+
+<div id="impress-help"></div>
+
+<!-- Extra modules
+     Load highlight.js, mermaid.js, markdown.js and MathJax.js from extras.
+     If you're curious about details, these are initialized in src/plugins/extras/extras.js -->
+<script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
+<script type="text/javascript" src="extras/mermaid/mermaid.min.js"></script>
+<script type="text/javascript" src="extras/markdown/markdown.js"></script>
+<script type="text/javascript" src="extras/mathjax/MathJax.js?config=TeX-AMS_CHTML"></script>
+<!--
+    To make all described above really work, you need to include impress.js in the page.
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document.
+-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
+
+
+<!--Efect-->
+<!--
+
+<div class="step slide" "300" data-rel-y="1100" data-rotate="90">
+    <h1>Motion effects 101</h1>
+    <p>Items on the slide can</p>
+    <p class="fly-in fly-out">Fly in</p>
+    <p class="fade-in fade-out" style="transition-delay: 2s">Fade in</p>
+    <p class="zoom-in zoom-out" style="transition-delay: 4s">And zoom in</p>
+
+    <p class="left bottom"><small>...just like in PowerPoint. Yeah, I know I'm being lame, but it was fun to learn to do this in CSS3.</small></p>
+</div>
+
+-->
